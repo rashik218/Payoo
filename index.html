@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="max-w-[450px] mx-auto bg-[#f5f5f5] h-screen relative">
+      <div class="flex justify-center items-center pt-20">
+        <img class="" src="./assets/bg.png" />
+        <img class="absolute top-28" src="./assets/Group.png" />
+      </div>
+      <div class="log-in bg-white mx-5 rounded-2xl">
+        <form class="px-8 mt-[-160px] py-8">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-bold">Mobile Number</span>
+            </label>
+            <input
+              type="number"
+              id="accountNumber"
+              value="01356948637"
+              placeholder="Enter your number"
+              class="input input-bordered"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">4 Digit Pin</span>
+            </label>
+            <input
+              type="number"
+              id="pin"
+              value="1234"
+              placeholder="Enter 4 Digit Pin"
+              class="input input-bordered"
+              required
+            />
+            <label class="label">
+              <a href="#" class="label-text-alt link link-hover"
+                >Forgot password?</a
+              >
+            </label>
+          </div>
+          <div class="form-control mt-6">
+            <button id="login-btn" class="btn btn-primary">Login</button>
+          </div>
+        </form>
+      </div>
+    </header>
+    <script src="./script/utilities.js"></script>
+    <script src="./script/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="max-w-[450px] h-screen mx-auto bg-[#fafafa] px-5">
+      <nav class="flex justify-between items-center pt-8 mb-5">
+        <div class="max-w-[172px] flex items-center">
+          <img class="w-[50px]" src="./assets/Group.png" />
+          <div class="">
+            <span class="text-2xl font-bold">$</span>
+            <span class="text-2xl font-bold" id="mainBalance">54000</span>
+            <p>Available Balance</p>
+          </div>
+        </div>
+        <button id="logOut" class="btn btn-neutral">Log Out</button>
+      </nav>
+      <hr />
+      <div class="mt-8">
+        <h1 class="text-2xl font-bold">🔥 Welcome to Payooo!</h1>
+        <p class="mt-2">
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
+      </div>
+      <section class="mt-6 grid grid-cols-3 gap-5">
+        <div
+          id="addMoney"
+          class="max-w-[123px] flex flex-col items-center gap-2 border-2 py-4 rounded-2xl cursor-pointer"
+        >
+          <img src="./assets/wallet1.png" />
+          <p>Add Money</p>
+        </div>
+        <div
+          id="cashOut"
+          class="max-w-[123px] flex flex-col items-center gap-2 border-2 py-4 rounded-2xl cursor-pointer"
+        >
+          <img src="./assets/wallet1.png" />
+          <p>Cash Out</p>
+        </div>
+        <div
+          id="transferMoney"
+          class="max-w-[123px] flex flex-col items-center gap-2 border-2 py-4 rounded-2xl cursor-pointer"
+        >
+          <img src="./assets/wallet1.png" />
+          <p>Transfer Money</p>
+        </div>
+        <div
+          id="getBonus"
+          class="max-w-[123px] flex flex-col items-center gap-2 border-2 py-4 rounded-2xl cursor-pointer"
+        >
+          <img src="./assets/wallet1.png" />
+          <p>Get Bonus</p>
+        </div>
+        <div
+          id="payBill"
+          class="max-w-[123px] flex flex-col items-center gap-2 border-2 py-4 rounded-2xl cursor-pointer"
+        >
+          <img src="./assets/wallet1.png" />
+          <p>Pay Bill</p>
+        </div>
+        <div
+          id="transection"
+          class="max-w-[123px] flex flex-col items-center gap-2 border-2 py-4 rounded-2xl cursor-pointer"
+        >
+          <img src="./assets/wallet1.png" />
+          <p>Transactions</p>
+        </div>
+      </section>
+      <!-- add money section -->
+      <section id="add-money-section" class="mt-8">
+        <h1 class="font-bold">Add Money</h1>
+        <form class="card-body bg-white mt-4 rounded-2xl">
+          <label for="" class="font-semibold">Select A Bank</label>
+          <select id="allBannk" class="select select-bordered">
+            <option disabled selected>Select Bank</option>
+            <option value="Bkash">Bkash</option>
+            <option value="Nagad">Nagad</option>
+            <option value="DBBL">DBBL</option>
+          </select>
+          <div class="form-control">
+            <label class="label font-semibold">
+              <span class="label-text">Bank Account Number</span>
+            </label>
+            <input
+              type="number"
+              id="input-number"
+              value="01783965732"
+              placeholder="Enter 11 digit account number"
+              class="input input-bordered"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label class="label font-semibold">
+              <span class="label-text">Amount</span>
+            </label>
+            <input
+              id="amount"
+              type="number"
+              placeholder="Amount to withdraw"
+              class="input input-bordered"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label class="label font-semibold">
+              <span class="label-text">Pin Number</span>
+            </label>
+            <input
+              type="number"
+              id="pin"
+              value="1234"
+              placeholder="Enter 4 digit pin number"
+              class="input input-bordered"
+              required
+            />
+          </div>
+          <div class="form-control mt-6">
+            <button id="add-money" class="btn btn-primary text-xl">
+              Add Money
+            </button>
+          </div>
+        </form>
+      </section>
+      <!-- cash Out section -->
+      <section id="cashOut-section" class="mt-8">
+        <h1 class="font-bold">Cash Out</h1>
+        <form class="card-body bg-white mt-4 rounded-2xl">
+          <div class="form-control">
+            <label class="label font-semibold">
+              <span class="label-text">Agent Number</span>
+            </label>
+            <input
+              type="number"
+              id="agent-number"
+              value="01783965732"
+              placeholder="Enter 11 digit number"
+              class="input input-bordered"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label class="label font-semibold">
+              <span class="label-text">Amount</span>
+            </label>
+            <input
+              id="cashOutAmount"
+              type="number"
+              placeholder="Amount to withdraw"
+              class="input input-bordered"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label class="label font-semibold">
+              <span class="label-text">Pin Number</span>
+            </label>
+            <input
+              type="number"
+              id="cashOutPin"
+              value="1234"
+              placeholder="Enter 4 digit pin number"
+              class="input input-bordered"
+              required
+            />
+          </div>
+          <div class="form-control mt-6">
+            <button id="withdraw-money" class="btn btn-primary text-xl">
+              Withdraw Money
+            </button>
+          </div>
+        </form>
+      </section>
+      <!-- Transection section -->
+      <section id="transection-section" class="mt-10">
+        <div class="flex justify-between">
+          <p class="text-xl font-bold text-red-500">Transaction History</p>
+          <p>View All</p>
+        </div>
+        <div id="transection-history" class="mt-8"></div>
+      </section>
+    </header>
+    <script src="./script/utilities.js"></script>
+    <script src="./script/addmoney.js"></script>
+    <script src="./script/toggle.js"></script>
+    <script src="./script/withdraw.js"></script>
+  </body>
+</html>
